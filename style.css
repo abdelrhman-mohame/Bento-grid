@@ -1,0 +1,160 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;       /* Paragraph size */
+  background-color: hsl(0, 0%, 100%); /* White */
+  color: hsl(0, 0%, 7%); /* Black */
+  margin: 0;
+  padding: 0;
+  
+
+}
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+}
+.parent
+{
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-rows:repeat(4,1fr) ;
+    gap: 10px;
+    
+    height: auto;
+     max-width: 1440px; /* desktop size */
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 80%;
+   
+    
+   
+}
+
+
+.social
+{
+    background-color: var(--purple-500);
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    grid-row: 1/span 2;
+     border-radius: 10px;
+     text-align: center;
+     
+}
+.social h1
+{
+    color: var(--white);
+}
+.social span
+{
+   color: var(--yellow-500); 
+}
+.Manage
+{
+    grid-column-start: 2;
+    grid-row-start: 3 ;
+    background-color: var(--white);
+     border-radius: 10px;
+     border: 1px solid #ddd;
+}
+.Maintain
+{
+    grid-column-start:3 ;
+    grid-row-start:3 ;
+    background-color: var(--yellow-500);
+     border-radius: 10px;
+     text-align: center;
+}
+.schedule
+{
+    grid-column-start: 4 ;
+    grid-row:1/span 3 ;
+     background-color: var(--purple-100);
+      border-radius: 10px;
+      align-content: center;
+      text-align: center;
+}
+.Grow
+{
+    grid-column:3/span 4 ;
+    grid-row: 4;
+    background-color: var(--purple-500);
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.Grow h3
+{
+    color: var(--white);
+}
+.faster
+{
+    grid-column-start: 2;
+    grid-row-start: 4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Create
+{
+    grid-column-start:1 ;
+    grid-row: 1/span 2;
+    background-color: var(--yellow-100);
+    border-radius: 10px;
+    align-content: center;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+     
+}
+.Create span
+{
+    color: var(--purple-500);
+}
+.Write
+{
+    grid-column-start: 1;
+    grid-row: 3/span 4;
+    background-color: var(--yellow-500);
+    border-radius: 10px;
+    
+      text-align: center;
+}
+ h1 , h2 , h3 
+ {
+    font-weight: 500 px;
+ }
+ 
+ p
+ {
+    font-size: 18px;
+ }
+ 
+
+@media screen and (max-width: 426px) {
+  .parent {
+    grid-template-columns: 1fr; /* عمود واحد */
+    grid-template-rows: auto;   /* الصفوف تتظبط لوحدها */
+  }
+
+  .social,
+  .Manage,
+  .Maintain,
+  .schedule,
+  .Grow,
+  .faster,
+  .Create,
+  .Write {
+    grid-column: auto !important;  /* شيل تخصيص الأعمدة */
+    grid-row: auto !important;     /* شيل تخصيص الصفوف */
+    width: 100%;                   /* خليها تاخد العرض */
+  }
+}
