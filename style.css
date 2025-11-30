@@ -23,14 +23,14 @@ h1, h2, h3 {
 }
 
 p {
-  font-size: 1.125rem; /* 18px */
+  font-size: clamp(1rem, 1.125vw, 1.25rem); /* 18px */
 }
 
 .parent {
   display: grid;
   grid-template-columns: 1fr; /* mobile-first */
   grid-template-rows: auto;
-  gap: 10px;
+  gap: 0.625rem;
   max-width: 90%;
   margin: 0 auto;
   padding-inline: 1rem;
@@ -54,7 +54,7 @@ p {
 .Manage {
   background-color: var(--white);
   border-radius: 10px;
-  border: 1px solid #ddd;
+ border: 1px solid var(--yellow-100);
   text-align: center;
 }
 
@@ -83,7 +83,7 @@ p {
 }
 
 .faster {
-  border: 1px solid #ddd;
+  border: 1px solid var(--yellow-100);
   border-radius: 10px;
   text-align: center;
 }
@@ -108,7 +108,7 @@ p {
 /* ----- Responsive Design (Mobile-first) ----- */
 
 /* Tablets & Desktop */
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 26.625em) {
   .parent {
     grid-template-columns: repeat(4, 1fr);
   }
